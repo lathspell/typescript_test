@@ -1,0 +1,24 @@
+:toc:
+
+= Learning Typescript
+
+== Links
+
+* https://www.typescriptlang.org/docs/handbook
+* https://www.typescriptlang.org/play/ - Playground with tsconfig wizard
+
+== Caveats for Java / Kotlin programmers
+
+Values can not only be of one type but also of a set of types. I.e. something returned as "string | number" is either of those types.
+
+Types are "structural types", not "nominal types", i.e. if an object has the properties "x" and "y", you can pass it to a function that expects a parameter of the "Point" interface type. If it also has a property "name", it additionally satisfies all interfaces that just require such an attribute.
+
+Types also are not "reified", i.e. they lose all information about their type at runtime.
+
+== Tools
+
+tsc::
+This is the Typescript to Javascript compiler. It can be configured using `tsconfig.json`.
+
+
+

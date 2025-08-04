@@ -1,0 +1,32 @@
+{
+  "display": "Configuration TypeScript",
+  "compilerOptions": {
+    /* Base Options: */
+    "target": "ES2020",
+    "noEmit": true,  // tsc should not emit .js
+
+    /* If transpiling with TypeScript: */
+    "module": "NodeNext",
+
+    /* Strictness */
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "noImplicitOverride": true,
+
+    // Because we'll be using babel: ensure that Babel can safely transpile
+    // files in the TypeScript project.
+    //
+    // https://babeljs.io/docs/en/babel-plugin-transform-typescript/#caveats
+    "isolatedModules": true
+  },
+  "include": [
+    "*.ts",
+    "*.tsx",
+    ".meta/*.ts",
+    ".meta/*.tsx",
+    "__typetests__/*.tst.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
