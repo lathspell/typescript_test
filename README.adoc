@@ -20,5 +20,9 @@ Types also are not "reified", i.e. they lose all information about their type at
 tsc::
 This is the Typescript to Javascript compiler. It can be configured using `tsconfig.json`.
 
+babel::
+A Javascript transpiler that can be used to transform any Javascript version to any older one. In this case it is used instead of "tsc" to transform Typescript into the version of Javascript, that NodeJS can work with. It does only the compilation and cannot do static type checking. For that we need either "tsc" or just our IDE.
 
-
+eslint::
+A static linter, i.e. syntax checker. Is configured wit the "StandardJS" rule set so that we do not need the prettier tool. Uses `eslintrc.json`.
+We do have an additional `.editorconfig` file to control e.g. tab size.
