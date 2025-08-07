@@ -31,6 +31,7 @@
         "typescript-eslint": "^8.10.0"
     },
     "scripts": {
-        "build": "babel src --out-dir dist --extensions \".ts,.tsx\" --copy-files"
+        "build": "babel src --out-dir dist --extensions \".ts,.tsx\" --copy-files",
+        "test": "jest"
     }
 }

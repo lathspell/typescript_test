@@ -26,3 +26,12 @@ A Javascript transpiler that can be used to transform any Javascript version to 
 eslint::
 A static linter, i.e. syntax checker. Is configured wit the "StandardJS" rule set so that we do not need the prettier tool. Uses `eslintrc.json`.
 We do have an additional `.editorconfig` file to control e.g. tab size.
+
+npm::
+NodeJs Packet Manager. Like "Gradle". Can be used to install or manage dependencies and run everything that is defined in the `package.json` section `script` section.
+
+npx::
+NodeJs Packet Executer. Runs a CLI package immediately. Prefers the version in `node_modules/` but can as well download one into a temporary cache.
+
+ npx jest                 # runs the Jest test suite
+ npx typescript@5.9 tsc   # Runs `tsc` from the specified package
