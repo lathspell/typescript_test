@@ -3,7 +3,7 @@
  * They are still supported but deprecated in favor of ECMAScript modules (ESM).
  */
 
-class CjsGreeter {
+class ModulesCommonjs {
 
     greet(name: string): string {
         return `Hello, ${name}!`;
@@ -12,4 +12,4 @@ class CjsGreeter {
 }
 
 // This actually exports the class
-module.exports = { CjsGreeter }
+module.exports = { ModulesCommonjs }

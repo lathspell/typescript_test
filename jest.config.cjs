@@ -2,9 +2,8 @@ module.exports = {
   verbose: true,
   projects: ['<rootDir>'],
   testMatch: [
-    '**/__tests__/**/*.[jt]s?(x)',
-    '**/test/**/*.[jt]s?(x)',
-    '**/?(*.)+(spec|test).[jt]s?(x)',
+    '**/test/**/*.(ts|mts|cts)',
+    '**/?(*.)+(spec|test).(ts|mts|cts)',
   ],
   testPathIgnorePatterns: [
     '/(?:production_)?node_modules/',
@@ -14,9 +13,9 @@ module.exports = {
     '__mocks__',
   ],
   transform: {
-    '^.+\\.[jt]sx?$': 'babel-jest',
+    '^.+\\.(m|c)?[jt]sx?$': 'babel-jest',
   },
   moduleNameMapper: {
-    '^(\\.\\/.+)\\.js$': '$1',
+    '^(\\.\\/.+)\\.(js)$': '$1',
   },
 }

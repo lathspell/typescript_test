@@ -3,12 +3,13 @@
 import {describe, expect, it} from "@jest/globals";
 
 // Namespaces can be imported just like CommonJS modules
-const myNamespace = require('./myNamespace.js');
+const { ns1, ns2 } = require('./namespaces.ts');
 
 describe('legacy namespaces', () => {
 
     it('double', () => {
-        expect(myNamespace.twice(2)).toBe(4)
+        expect(ns1.twice(2)).toBe(4)
+        expect(ns2.thrice(2)).toBe(6)
     })
 
 })

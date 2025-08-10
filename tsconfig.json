@@ -3,7 +3,7 @@
     /** See https://www.typescriptlang.org/tsconfig/ */
     "compilerOptions": {
         /* Base Options: */
-        "target": "ES2024",
+        "target": "ESNext",
         /* Old module system or the new ECMA Script Module (ESM) system? */
         "module": "NodeNext",
         /* TSC should not emit *.js files as we use Babel for that */
@@ -26,8 +26,12 @@
     "include": [
         "*.ts",
         "*.tsx",
+        "*.mts",
+        "*.cts",
         ".meta/*.ts",
         ".meta/*.tsx",
+        ".meta/*.mts",
+        ".meta/*.cts",
         "__typetests__/*.tst.ts"
     ],
     "exclude": [

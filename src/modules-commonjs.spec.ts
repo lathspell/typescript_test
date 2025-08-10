@@ -5,10 +5,11 @@
 
 import { describe, it, expect } from '@jest/globals';
 
-import { EsmGreeter } from './modules/EsmGreeter.ts';
+// This imports the class (just like "import" in modern ESM
+const { ModulesCommonjs } = require('./modules-commonjs.cts');
 
 describe('esm imports', () => {
   it('call imported method', () => {
-    expect(new EsmGreeter().greet('Tim')).toBe('Hello, Tim!');
+    expect(new ModulesCommonjs().greet('Tim')).toBe('Hello, Tim!');
   });
 });

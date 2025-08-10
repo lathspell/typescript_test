@@ -15,6 +15,18 @@ Types are "structural types", not "nominal types", i.e. if an object has the pro
 
 Types also are not "reified", i.e. they lose all information about their type at runtime.
 
+== Modules
+
+Since ES2015, the ECMA Module System (ESM) with "import"/"export" is preferred over the legacy CommonJS system
+with "module.exports"/"require".
+
+Module files can explicitly be name "*.cts" or "*.mts" to have them use one style despite `package.json` specifying the other.
+Beware, though, that the extra suffixes need to be registered in `tsconfig.json` as well as `jest.config`.
+
+Links:
+
+* https://betterstack.com/community/guides/scaling-nodejs/commonjs-vs-esm/
+
 == Tools
 
 tsc::
