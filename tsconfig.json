@@ -1,38 +1,36 @@
 {
-  "display": "Configuration TypeScript",
-
-  /** See https://www.typescriptlang.org/tsconfig/ */
-  "compilerOptions": {
-    /* Base Options: */
-    "target": "ES2024",
-    /* Old module system or the new ECMA Script Module (ESM) system? */
-    "module": "NodeNext",
-
-    /* TSC should not emit *.js files as we use Babel for that */
-    "noEmit": true,
-
-    /* Strictness */
-    "strict": true,
-    /* - included in "strict": throw an error where no type can be inferred */
-    "noImplicitAny": true,
-    /* - included in "strict": forces explicit handling of NULL and "undefined" */
-    "strictNullChecks": true,
-    /* - only allow accessing attribute names that were explicitly defined */
-    "noUncheckedIndexedAccess": true,
-    /* - requires the use of the "override" keyword when overriding during class inheritance */
-    "noImplicitOverride": true,
-
-    /* Helps Babel, see https://babeljs.io/docs/en/babel-plugin-transform-typescript/#caveats */
-    "isolatedModules": true
-  },
-  "include": [
-    "*.ts",
-    "*.tsx",
-    ".meta/*.ts",
-    ".meta/*.tsx",
-    "__typetests__/*.tst.ts"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "display": "Configuration TypeScript",
+    /** See https://www.typescriptlang.org/tsconfig/ */
+    "compilerOptions": {
+        /* Base Options: */
+        "target": "ES2024",
+        /* Old module system or the new ECMA Script Module (ESM) system? */
+        "module": "NodeNext",
+        /* TSC should not emit *.js files as we use Babel for that */
+        "noEmit": true,
+        /* Strictness */
+        "strict": true,
+        /* - included in "strict": throw an error where no type can be inferred */
+        "noImplicitAny": true,
+        /* - included in "strict": forces explicit handling of NULL and "undefined" */
+        "strictNullChecks": true,
+        /* - only allow accessing attribute names that were explicitly defined */
+        "noUncheckedIndexedAccess": true,
+        /* - requires the use of the "override" keyword when overriding during class inheritance */
+        "noImplicitOverride": true,
+        /* - allow importing TS files with the ".ts" extension */
+        "allowImportingTsExtensions": true,
+        /* Helps Babel, see https://babeljs.io/docs/en/babel-plugin-transform-typescript/#caveats */
+        "isolatedModules": true
+    },
+    "include": [
+        "*.ts",
+        "*.tsx",
+        ".meta/*.ts",
+        ".meta/*.tsx",
+        "__typetests__/*.tst.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
 }
