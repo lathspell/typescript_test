@@ -15,6 +15,7 @@ Types are "structural types", not "nominal types", i.e. if an object has the pro
 
 Types also are not "reified", i.e. they lose all information about their type at runtime.
 
+
 == Modules
 
 Since ES2015, the ECMA Module System (ESM) with "import"/"export" is preferred over the legacy CommonJS system
@@ -45,5 +46,20 @@ NodeJs Packet Manager. Like "Gradle". Can be used to install or manage dependenc
 npx::
 NodeJs Packet Executer. Runs a CLI package immediately. Prefers the version in `node_modules/` but can as well download one into a temporary cache.
 
+volta::
+NodeJs environment manager. Provides access to the npm/node versions that are defined as "engine" in package.json.
+
  npx jest                 # runs the Jest test suite
  npx typescript@5.9 tsc   # Runs `tsc` from the specified package
+
+=== npm
+
+Problems with IPv6?
+
+    NODE_OPTIONS=--dns-result-order=ipv4first npm --loglevel=verbose ci
+
+=== volta
+
+Use like
+
+    volta run npm ci
