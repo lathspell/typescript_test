@@ -1,14 +1,13 @@
-import {describe, it, expect} from '@jest/globals'
+import { describe, it, expect } from '@jest/globals'
 
 describe('variables', () => {
-
     /** Immutable variables are defined with "const", normal ones with "let". */
     it('scalars', () => {
         const foo = 42
         expect(foo).toBe(42)
         expect(foo).not.toBe('42')
 
-        let bar = 41;
+        let bar = 41
         bar += 1
         if (true) {
             let bar = -1 // "let" is block scoped as expected
@@ -21,6 +20,35 @@ describe('variables', () => {
             var baz = 2
         }
         expect(baz).toBe(2) // wtf?
+    })
+
+    it('comparisons with null and undefined', () => {
+        expect(null === null).toBe(true)
+        expect(null === true).toBe(false)
+        expect(null === false).toBe(false)
+        expect(null === undefined).toBe(false)
+
+        expect(null == null).toBe(true)
+        expect(null == true).toBe(false)
+        expect(null == false).toBe(false)
+        expect(null == undefined).toBe(true)
+
+        expect(null != null).toBe(false)
+        expect(null != true).toBe(true)
+        expect(null != false).toBe(true)
+        expect(null != undefined).toBe(false)
+
+        expect(undefined === undefined).toBe(true)
+        expect(undefined === null).toBe(false)
+        expect(undefined === true).toBe(false)
+        expect(undefined === false).toBe(false)
+
+        expect(undefined !== undefined).toBe(false)
+
+        expect(undefined == undefined).toBe(true)
+        expect(undefined == null).toBe(true) // undefined is kinda null
+        expect(undefined == true).toBe(false)
+        expect(undefined == false).toBe(false)
     })
 
     it('functions', () => {
@@ -91,7 +119,7 @@ describe('variables', () => {
         expect(a).not.toBe(b) // different references
         expect(a === b).toBeFalsy() // reference equality
         expect(a == b).toBeFalsy() // reference equality (would accept `true == 1`)
-        expect(a).toEqual(b)  // same shape and values
+        expect(a).toEqual(b) // same shape and values
 
         // shallow copy with spread keeps nested references
         const shallow = { ...a }
@@ -111,5 +139,4 @@ describe('variables', () => {
         deepCopyJSON.x.y = 43
         expect(a.x.y).toBe(2) // nested object was changed
     })
-
 })

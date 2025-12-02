@@ -1,10 +1,9 @@
-import {describe, it, expect} from '@jest/globals'
+import { describe, it, expect } from '@jest/globals'
 
 describe('math', () => {
-
     it('power', () => {
         expect(2 ** 3).toBe(8)
-        expect(Math.pow(2,3)).toBe(8)
+        expect(Math.pow(2, 3)).toBe(8)
     })
 
     it('divide to fraction', () => {

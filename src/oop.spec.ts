@@ -1,4 +1,4 @@
-import {describe, it, expect} from '@jest/globals'
+import { describe, it, expect } from '@jest/globals'
 
 /**
  * OOP in JavaScript/TypeScript is prototype-based.
@@ -6,7 +6,6 @@ import {describe, it, expect} from '@jest/globals'
  * The current version is ES2025 (would be ES16).
  */
 describe('oop', () => {
-
     it('prototypes with function constructors', () => {
         // Function constructor
         function Person(this: any, name: string) {

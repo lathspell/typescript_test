@@ -4,11 +4,9 @@
  */
 
 class ModulesCommonjs {
-
     greet(name: string): string {
-        return `Hello, ${name}!`;
+        return `Hello, ${name}!`
     }
-
 }
 
 // This actually exports the class
