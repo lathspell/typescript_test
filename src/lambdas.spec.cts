@@ -1,7 +1,6 @@
-import {describe, expect, it} from '@jest/globals'
+import { describe, expect, it } from '@jest/globals'
 
 describe('lambda', () => {
-
     it('with type and expression', () => {
         const lambda = (a: number) => a * a
         expect(lambda(2)).toBe(4)
@@ -19,5 +18,4 @@ describe('lambda', () => {
         }
         expect(lambda(2)).toBe(4)
     })
-
 })
