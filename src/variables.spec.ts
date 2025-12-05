@@ -92,6 +92,11 @@ describe('variables', () => {
         copy.push(5)
         expect(nums).toEqual([1, 2, 3, 4]) // original not affected
         expect(copy).toEqual([1, 2, 3, 4, 5])
+
+        // check if element exists
+        const emptyArray: string[] = []
+        expect(emptyArray[4]).toBeUndefined() // no "array out of bounds" exception or similar!
+        expect(emptyArray[4] ?? 'default').toEqual('default')
     })
 
     it('anonymous objects', () => {
