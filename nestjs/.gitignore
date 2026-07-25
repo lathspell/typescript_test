@@ -1,0 +1,9 @@
+# AI
+/.claude
+
+# IDE
+/.idea
+
+# Javascript
+node_modules/
+dist/
